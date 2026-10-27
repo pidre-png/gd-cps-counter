@@ -149,9 +149,9 @@ class $modify(CPSPlayLayer, PlayLayer) {
 };
 
 class $modify(CPSBaseGameLayer, GJBaseGameLayer) {
-    void queueButton(int button, bool push, bool isPlayer2, double timestamp) {
-        GJBaseGameLayer::queueButton(button, push, isPlayer2, timestamp);
-        if (!push || !shouldCount(button)) return;
+    void handleButton(bool down, int button, bool isPlayer1) {
+        GJBaseGameLayer::handleButton(down, button, isPlayer1);
+        if (!down || !shouldCount(button)) return;
 
         auto& state = CPSState::get();
         state.clickTimesMs.push_back(nowMs());
