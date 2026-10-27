@@ -1,0 +1,113 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "kola.cps-counter",
+	"name": "CPS Counter",
+	"version": "v1.0.0",
+	"developer": "kola",
+	"description": "Shows your clicks per second in real time, the peak CPS, and the total click count for the current attempt or level.",
+	"tags": ["utility", "hud", "interface"],
+	"links": {},
+	"dependencies": [],
+	"settings": {
+		"display-category": {
+			"name": "Display",
+			"type": "title"
+		},
+		"show-realtime": {
+			"name": "Show real-time CPS",
+			"description": "Clicks per second, measured over the tracking window below.",
+			"type": "bool",
+			"default": true
+		},
+		"show-max": {
+			"name": "Show max CPS",
+			"description": "The highest CPS reached.",
+			"type": "bool",
+			"default": true
+		},
+		"show-total": {
+			"name": "Show total clicks",
+			"description": "Total clicks this attempt or level.",
+			"type": "bool",
+			"default": true
+		},
+		"gameplay-category": {
+			"name": "Gameplay",
+			"type": "title"
+		},
+		"count-source": {
+			"name": "Count clicks from",
+			"description": "\"Jump only\" ignores platformer movement buttons.",
+			"type": "string",
+			"one-of": ["All buttons", "Jump only"],
+			"default": "All buttons"
+		},
+		"total-mode": {
+			"name": "Total clicks resets on",
+			"description": "\"Per attempt\" resets every death, \"Per level\" keeps counting until you leave the level.",
+			"type": "string",
+			"one-of": ["Attempt", "Level"],
+			"default": "Attempt"
+		},
+		"max-mode": {
+			"name": "Max CPS resets on",
+			"type": "string",
+			"one-of": ["Attempt", "Level"],
+			"default": "Level"
+		},
+		"window-ms": {
+			"name": "CPS window (ms)",
+			"description": "How long a click keeps counting toward real-time CPS. Lower = twitchier.",
+			"type": "int",
+			"default": 1000,
+			"min": 100,
+			"max": 5000
+		},
+		"layout-category": {
+			"name": "Layout",
+			"type": "title"
+		},
+		"scale": {
+			"name": "Text scale",
+			"type": "float",
+			"default": 0.8,
+			"min": 0.3,
+			"max": 2.0,
+			"control": {
+				"slider": true
+			}
+		},
+		"offset-x": {
+			"name": "Offset X",
+			"description": "Distance from the left edge of the screen.",
+			"type": "int",
+			"default": 12,
+			"min": -200,
+			"max": 600
+		},
+		"offset-y": {
+			"name": "Offset Y",
+			"description": "Distance from the top edge of the screen.",
+			"type": "int",
+			"default": 60,
+			"min": 0,
+			"max": 400
+		},
+		"opacity": {
+			"name": "Opacity",
+			"type": "int",
+			"default": 255,
+			"min": 30,
+			"max": 255,
+			"control": {
+				"slider": true
+			}
+		}
+	}
+}
