@@ -13,7 +13,6 @@
 	"description": "Shows your clicks per second in real time, the peak CPS, and the total click count for the current attempt or level.",
 	"tags": ["utility", "hud", "interface"],
 	"links": {},
-	"dependencies": [],
 	"settings": {
 		"display-category": {
 			"name": "Display",
